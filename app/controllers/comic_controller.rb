@@ -22,7 +22,7 @@ class ComicsController < ApplicationController
         erb :'/comics/show'
     end
 
-    get '/tweets/:id/edit' do
+    get '/comics/:id/edit' do
         @comic = Comic.find_by_id(params[:id])
         erb :'comics/edit'
     end

@@ -15,4 +15,5 @@
     <label for="artist">Artist(s):</label>
     <input type="text" name="comic[artist]" value="<%= @comic.title %>"><br><br>
     <input type="submit" name="submit" value="Finalize Edits">
-</form>
+</form><br>
+<a href="/users/<%= @comic.user_id %>">Return Home</a>
