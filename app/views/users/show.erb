@@ -2,6 +2,9 @@
 <br>
 <h4>Welcome to your library, <%= @user.username %>!</h4><br>
 
+<a href="/comics/new">Add A Comic</a><br><br>
+
+<h3>Your Comics</h3>
 <% @user.comics.each do |comic| %>
     <%= comic.title %> #<%= comic.issue %><br>
 <% end %>
