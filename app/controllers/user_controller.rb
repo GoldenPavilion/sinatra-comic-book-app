@@ -6,7 +6,12 @@ class UserController < ApplicationController
 
     post '/login' do
         @user = User.find_by(email: params[:email])
-        erb :"users/show"
+        if @user && @user.authenticate(params[:password])
+            session[:user_id] = @user.id
+            erb :"users/show"
+        else 
+            redirect to '/login'
+        end
     end
 
     get '/signup' do
