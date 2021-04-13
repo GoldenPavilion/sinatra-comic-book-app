@@ -4,4 +4,4 @@
 <h5>Story Arc:<%= @comic.arc %></h5><br>
 <h5>Writer(s):<%= @comic.writer %></h5><br>
 <h5>Artist(s):<%= @comic.artist %></h5><br><br>
-<a href="/users/#{current_user.id}">Return Home</a>
+<a href="/users/<%= @comic.user_id %>">Return Home</a>

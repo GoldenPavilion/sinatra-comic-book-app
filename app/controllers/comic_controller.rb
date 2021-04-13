@@ -19,6 +19,7 @@ class ComicsController < ApplicationController
 
     get '/comics/:id' do
         @comic = Comic.find_by_id(params[:id])
+        @user = current_user.id
         erb :'/comics/show'
     end
 
