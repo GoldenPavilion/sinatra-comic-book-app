@@ -1,0 +1,5 @@
+class ComicsController < ApplicationController
+
+
+
+end
