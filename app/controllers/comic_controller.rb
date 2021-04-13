@@ -19,8 +19,6 @@ class ComicsController < ApplicationController
 
     get '/comics/:id' do
         @comic = Comic.find_by_id(params[:id])
-        @user = User.find_by_id(params[:user_id])
-        binding.pry
         erb :'/comics/show'
     end
 
