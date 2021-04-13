@@ -29,5 +29,9 @@ class UserController < ApplicationController
         redirect to '/login'
     end
 
-    #create user page with slug
+    get '/users/:id' do
+        @user = User.find_by_id(params[:id])
+        binding.pry
+        erb :"users/show"
+    end
 end
