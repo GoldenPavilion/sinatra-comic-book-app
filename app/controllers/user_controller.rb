@@ -5,8 +5,8 @@ class UserController < ApplicationController
     end
 
     post '/login' do
-        @user = User.find_by(username: params[:username])
-        binding.pry
+        @user = User.find_by(email: params[:email])
+        erb :"users/show"
     end
 
     get '/signup' do
