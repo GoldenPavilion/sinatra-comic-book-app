@@ -8,9 +8,9 @@ class UserController < ApplicationController
         @user = User.find_by(email: params[:email])
         if @user && @user.authenticate(params[:password])
             session[:user_id] = @user.id
-            erb :"users/show"
+            redirect to "/users/#{@user.id}"
         else 
-            redirect to '/login'
+            redirect to "/login"
         end
     end
 
@@ -21,7 +21,7 @@ class UserController < ApplicationController
     post '/signup' do
         @user = User.create(username: params[:username], email: params[:email], password: params[:password])
         session[:user_id] = @user.id
-        erb :"users/show"
+        redirect to "/users/#{@user.id}"
     end
 
     get '/logout' do
@@ -31,7 +31,6 @@ class UserController < ApplicationController
 
     get '/users/:id' do
         @user = User.find_by_id(params[:id])
-        binding.pry
         erb :"users/show"
     end
 end
