@@ -14,6 +14,12 @@ class ComicsController < ApplicationController
         )
         @comic.user_id = current_user.id
         @comic.save
+        redirect to "/comics/#{@comic.id}"
+    end
+
+    get '/comics/:id' do
+        @comic = Comic.find_by_id(params[:id])
+        erb :'/comics/show'
     end
 
 end
