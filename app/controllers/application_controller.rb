@@ -21,4 +21,6 @@ class ApplicationController < Sinatra::Base
     end
   end
 
+  ### Set Up UserController and User Views
+
 end
