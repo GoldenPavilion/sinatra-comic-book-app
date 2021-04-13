@@ -9,19 +9,20 @@ GIT
 GEM
   remote: http://rubygems.org/
   specs:
-    activemodel (6.0.3.6)
-      activesupport (= 6.0.3.6)
-    activerecord (6.0.3.6)
-      activemodel (= 6.0.3.6)
-      activesupport (= 6.0.3.6)
-    activesupport (6.0.3.6)
+    activemodel (5.2.5)
+      activesupport (= 5.2.5)
+    activerecord (5.2.5)
+      activemodel (= 5.2.5)
+      activesupport (= 5.2.5)
+      arel (>= 9.0)
+    activesupport (5.2.5)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-      zeitwerk (~> 2.2, >= 2.2.2)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    arel (9.0.0)
     bcrypt (3.1.16)
     bond (0.5.1)
     capybara (3.35.3)
@@ -110,13 +111,12 @@ GEM
       thread_safe (~> 0.1)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.4.2)
 
 PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  activerecord (~> 6.0.0)
+  activerecord (~> 5.2.3)
   bcrypt
   capybara
   database_cleaner!
