@@ -29,4 +29,5 @@ class UserController < ApplicationController
         redirect to '/login'
     end
 
+    #create user page with slug
 end
