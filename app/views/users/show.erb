@@ -6,7 +6,7 @@
 
 <h3>Your Comics</h3>
 <% @user.comics.each do |comic| %>
-    <%= comic.title %> #<%= comic.issue %><br>
+    <a href="/comics/<%= comic.id %>"><%= comic.title %> #<%= comic.issue %></a><br>
 <% end %>
 <br>
 <a href="/logout">Logout</a>

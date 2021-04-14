@@ -35,8 +35,6 @@ class ComicsController < ApplicationController
         @comic.writer = params[:comic][:writer]
         @comic.artist = params[:comic][:artist]
         @comic.save
-        #@comic.update(title: params[:comic][:title], params[:comic][:issue], arc: params[:comic][:arc], writer: params[:comic][:writer], artist: params[:comic][:artist])
-        #@comic.save
 
         redirect to "/comics/#{@comic.id}"
     end
@@ -47,5 +45,7 @@ class ComicsController < ApplicationController
 
         redirect to "/users/#{@comic.user_id}"
     end
+
+    #APP FUNCTIONS - Now use if statements to create conditional usage for routes. 
 
 end
