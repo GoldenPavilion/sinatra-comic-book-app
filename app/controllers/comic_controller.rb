@@ -27,4 +27,21 @@ class ComicsController < ApplicationController
         erb :'comics/edit'
     end
 
+    patch '/comics/:id' do
+        @comic = Comic.find_by_id(params[:id])
+        @comic.update(
+            title: params[:comic][:title],
+            params[:comic][:issue],
+            arc: params[:comic][:arc],
+            writer: params[:comic][:writer],
+            artist: params[:comic][:artist] 
+        )
+        @comic.save
+
+        redirect to "/comics/#{@comic.id}"
+    end
+
+    #needs patch
+    #needs delete
+
 end
