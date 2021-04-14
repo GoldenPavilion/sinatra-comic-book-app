@@ -43,7 +43,7 @@ class ComicsController < ApplicationController
 
     delete '/comics/:id' do
         @comic = Comic.find_by_id(params[:id])
-        @recipe.delete
+        @comic.delete
 
         redirect to "/users/#{@comic.user_id}"
     end
