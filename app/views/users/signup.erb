@@ -1,6 +1,9 @@
 <h1>Bag & Board</h1>
 <br>
 <h4>Sign Up For Your Account!</h4><br>
+<% if flash.has?(:message) %>
+    <%= flash[:message] %>
+<% end %>
 <form action="/signup" method="post">
     <label for="username">Username:</label>
     <input type="text" name="username" id="username"><br><br>
