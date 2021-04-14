@@ -1,4 +1,8 @@
+require 'rack-flash'
+
 class UserController < ApplicationController
+
+    use Rack::Flash
 
     get '/login' do
         if logged_in?
