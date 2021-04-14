@@ -1,5 +1,10 @@
 class ComicsController < ApplicationController
 
+    get '/comics' do
+        @comics = Comic.all
+        erb :'comics/feed'
+    end
+    
     get '/comics/new' do
         erb :'comics/new'
     end
@@ -42,10 +47,7 @@ class ComicsController < ApplicationController
     delete '/comics/:id' do
         @comic = Comic.find_by_id(params[:id])
         @comic.delete
-
+        #need to fix above - delete is broken
         redirect to "/users/#{@comic.user_id}"
-    end
-
-    #APP FUNCTIONS - Now use if statements to create conditional usage for routes. 
-
+    end 
 end
