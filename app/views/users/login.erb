@@ -1,5 +1,8 @@
 <h1>Bag & Board</h1>
 <br>
+<% if flash.has?(:message) %>
+    <%= flash[:message] %>
+<% end %>
 <br>
 <form action="/login" method="POST">
     <label for="email">Email:</label>
