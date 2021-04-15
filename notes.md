@@ -8,3 +8,10 @@
 [ ] Ensure that users can edit and delete only their own resources - not resources created by other users.
 [ ] Validate user input so bad data cannot be persisted to the database.
 [ ] BONUS: Display validation failures to user with error messages. (This is an optional feature, challenge yourself and give it a shot!)
+
+
+---Delete doesn't work. 
+---Getting Username to appear on Comic feed. 
+    comic.user.username isn't working
+---Add a Date Stamp to Comic
+---Organize Comics on Feed Alphabetically or by Date
