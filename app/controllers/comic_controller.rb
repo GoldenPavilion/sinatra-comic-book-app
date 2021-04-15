@@ -1,12 +1,20 @@
 class ComicsController < ApplicationController
 
     get '/comics' do
-        @comics = Comic.all
-        erb :'comics/feed'
+        if logged_in?
+            @comics = Comic.all
+            erb :'comics/feed'
+        else
+            redirect to "/login"
+        end
     end
     
     get '/comics/new' do
-        erb :'comics/new'
+        if logged_in?
+            erb :'comics/new'
+        else
+            redirect to "/login"
+        end
     end
 
     post '/comics' do
