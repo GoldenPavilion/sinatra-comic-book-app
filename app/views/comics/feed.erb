@@ -3,5 +3,6 @@
 <h4>Newly Added Comics</h4>
 <br>
 <% @comics.each do |comic| %>
-    <a href="/comics/<%= comic.id %>"><%= comic.title %> #<%= comic.issue %></a><br>
+    <a href="/comics/<%= comic.id %>"><%= comic.title %> #<%= comic.issue %></a>
+    <br>
 <% end %>
