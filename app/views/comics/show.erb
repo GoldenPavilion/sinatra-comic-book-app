@@ -6,6 +6,8 @@
 <h5>Artist(s): <%= @comic.artist %></h5><br>
 <h4>Rating: <%= @comic.rating %></h4><br>
 
+<a href="/comics/<%= @comic.id %>/edit"><h5>Edit Comic</h5></a>
+
 <form action="/comics/<%= @comic.id %>" method="post">
     <input id="hidden" type="hidden" name="_method" value="delete">
     <input type="submit" id="delete" value="Delete">
