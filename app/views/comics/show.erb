@@ -1,9 +1,10 @@
 <h1>Bag & Board</h1>
 <br>
 <h2><%= @comic.title %> #<%= @comic.issue %></h2>
-<h5>Story Arc:<%= @comic.arc %></h5><br>
-<h5>Writer(s):<%= @comic.writer %></h5><br>
-<h5>Artist(s):<%= @comic.artist %></h5><br>
+<h5>Story Arc: <%= @comic.arc %></h5><br>
+<h5>Writer(s): <%= @comic.writer %></h5><br>
+<h5>Artist(s): <%= @comic.artist %></h5><br>
+<h4>Rating: <%= @comic.rating %></h4><br>
 
 <form action="/comics/<%= @comic.user_id %>" method="post">
     <input id="hidden" type="hidden" name="_method" value="delete">
