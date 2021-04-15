@@ -56,6 +56,7 @@ class ComicsController < ApplicationController
         @comic.arc = params[:comic][:arc]
         @comic.writer = params[:comic][:writer]
         @comic.artist = params[:comic][:artist]
+        @comic.rating = params[:comic][:rating]
         @comic.save
 
         redirect to "/comics/#{@comic.id}"
