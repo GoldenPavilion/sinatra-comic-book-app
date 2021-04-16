@@ -5,9 +5,9 @@
 [x] Must have user accounts - users must be able to sign up, sign in, and sign out.
 [x] Validate uniqueness of user login attribute (username or email).
 [x] Once logged in, a user must have the ability to create, read, update and destroy the resource that belongs_to user.
-[ ] Ensure that users can edit and delete only their own resources - not resources created by other users.
+[x] Ensure that users can edit and delete only their own resources - not resources created by other users.
 [ ] Validate user input so bad data cannot be persisted to the database.
-[ ] BONUS: Display validation failures to user with error messages. (This is an optional feature, challenge yourself and give it a shot!)
+[x] BONUS: Display validation failures to user with error messages. (This is an optional feature, challenge yourself and give it a shot!)
 
 
 ---Add a Date Stamp to Comic

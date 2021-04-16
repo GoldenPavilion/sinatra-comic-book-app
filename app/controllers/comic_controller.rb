@@ -3,6 +3,7 @@ class ComicsController < ApplicationController
     get '/comics' do
         if logged_in?
             @comics = Comic.all
+            @user = current_user
             erb :'comics/feed'
         else
             redirect to "/login"
