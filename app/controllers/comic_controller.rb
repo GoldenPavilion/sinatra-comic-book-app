@@ -57,15 +57,20 @@ class ComicsController < ApplicationController
 
     patch '/comics/:id' do
         @comic = Comic.find_by_id(params[:id])
-        @comic.title = params[:comic][:title]
-        @comic.issue = params[:comic][:issue]
-        @comic.arc = params[:comic][:arc]
-        @comic.writer = params[:comic][:writer]
-        @comic.artist = params[:comic][:artist]
-        @comic.rating = params[:comic][:rating]
-        @comic.save
 
-        redirect to "/comics/#{@comic.id}"
+        if params[:comic][:title] != ""
+            @comic.title = params[:comic][:title]
+            @comic.issue = params[:comic][:issue]
+            @comic.arc = params[:comic][:arc]
+            @comic.writer = params[:comic][:writer]
+            @comic.artist = params[:comic][:artist]
+            @comic.rating = params[:comic][:rating]
+            @comic.save
+
+            redirect to "/comics/#{@comic.id}"
+        else
+            redirect to "/comics/#{@comic.id}/edit"
+        end
     end
 
     delete '/comics/:id' do
