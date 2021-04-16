@@ -11,6 +11,7 @@ class ComicsController < ApplicationController
     end
     
     get '/comics/new' do
+        @user = current_user
         if logged_in?
             erb :'comics/new'
         else
