@@ -56,8 +56,8 @@ class UserController < ApplicationController
         if logged_in? && current_user == @user
             erb :"users/show"
         else
-            redirect to "/users/#{@user.id}"
-            #REDIRECT DOESN'T WORK
+            redirect to "/comics"
+            #redirect to "/users/#{@user.id}" Would Prefer This Redirect But Doesn't Work
         end
     end
 end
