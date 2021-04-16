@@ -1,9 +1,13 @@
 <h1>Bag & Board</h1>
 <br>
-<h4>Newly Added Comics</h4>
+<h2>Welcome, <%= @user.username %>, to the Universal Comics Feed!</h2>
+<p>Check out what everyone else is reading - or - organize your own library</p>
+<a href="/users/<%= @user.id %>"><h4>Your Personal Comic Library</h4></a>
+<br>
+<h3>The Universal Feed</h3>
 <br>
 <% @comics.each do |comic| %>
-    <a href="/comics/<%= comic.id %>"><b><%= comic.title %> #<%= comic.issue %></b></a> - Rating: <b><%= comic.rating %></b> - Added by: <%= comic.user.username %>
+    <ul><a href="/comics/<%= comic.id %>"><b><%= comic.title %> #<%= comic.issue %></b></a> - Rating: <b><%= comic.rating %></b> - Added by: <%= comic.user.username %></ul>
     <br>
 <% end %>
 <br><br>
