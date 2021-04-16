@@ -3,7 +3,7 @@
 <h4>Newly Added Comics</h4>
 <br>
 <% @comics.each do |comic| %>
-    <a href="/comics/<%= comic.id %>"><%= comic.title %> #<%= comic.issue %></a> - Added by: <%= comic.user.username %>
+    <a href="/comics/<%= comic.id %>"><b><%= comic.title %> #<%= comic.issue %></b></a> - Rating: <b><%= comic.rating %></b> - Added by: <%= comic.user.username %>
     <br>
 <% end %>
 <br><br>
