@@ -64,8 +64,12 @@ class ComicsController < ApplicationController
 
     delete '/comics/:id' do
         @comic = Comic.find_by_id(params[:id])
-        @comic.delete
-        #need to fix above - delete is broken
-        redirect to "/users/#{@comic.user_id}"
+        @user = current_user
+        if logged_in? && current_user.id == @comic.user_id
+            @comic.delete
+            redirect to "/users/#{@user.id}"
+        else
+            redirect to "/comics"
+        end
     end 
 end
