@@ -38,6 +38,7 @@ class ComicsController < ApplicationController
     end
 
     get '/comics/:id' do
+        @user = current_user
         if logged_in?
             @comic = Comic.find_by_id(params[:id])
             erb :'/comics/show'
