@@ -20,17 +20,21 @@ class ComicsController < ApplicationController
     end
 
     post '/comics' do
-        @comic = Comic.create(
-            title: params[:title],
-            issue: params[:issue],
-            arc: params[:arc],
-            writer: params[:writer],
-            artist: params[:artist],
-            rating: params[:rating]    
-        )
-        @comic.user_id = current_user.id
-        @comic.save
-        redirect to "/comics/#{@comic.id}"
+        if params[:title] !=""
+            @comic = Comic.create(
+                title: params[:title],
+                issue: params[:issue],
+                arc: params[:arc],
+                writer: params[:writer],
+                artist: params[:artist],
+                rating: params[:rating]    
+            )
+            @comic.user_id = current_user.id
+            @comic.save
+            redirect to "/comics/#{@comic.id}"
+        else
+            redirect to "/comics/new"
+        end
     end
 
     get '/comics/:id' do
