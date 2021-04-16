@@ -1,7 +1,7 @@
 <h1>Bag & Board</h1>
 <br>
 <h2><%= @comic.title %> #<%= @comic.issue %></h2>
-<h6>Added by: <%= @comic.user.username %></h6><br><br>
+<h6>Added by <%= @comic.user.username %> @ <%= @comic.created_at.to_s %></h6><br><br>
 <p>Story Arc: <b><%= @comic.arc %></b></p>
 <p>Writer(s): <b><%= @comic.writer %></b></p>
 <p>Artist(s): <b><%= @comic.artist %></b></p>
