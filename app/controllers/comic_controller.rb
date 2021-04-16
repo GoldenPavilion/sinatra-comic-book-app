@@ -2,7 +2,7 @@ class ComicsController < ApplicationController
 
     get '/comics' do
         if logged_in?
-            @comics = Comic.all
+            @comics = Comic.all.sort_by{|h| h[:title]}
             @user = current_user
             erb :'comics/feed'
         else
