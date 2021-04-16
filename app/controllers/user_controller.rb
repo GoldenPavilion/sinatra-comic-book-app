@@ -16,7 +16,7 @@ class UserController < ApplicationController
         @user = User.find_by(email: params[:email])
         if @user && @user.authenticate(params[:password])
             session[:user_id] = @user.id
-            redirect to "/users/#{@user.id}"
+            redirect to "/comics"
         else
             flash[:message] = "Sorry! Something went wrong. Re-enter your details." 
             redirect to "/login"
@@ -35,7 +35,7 @@ class UserController < ApplicationController
         if params[:username] !="" && params[:email] !="" && params[:password] !=""
             @user = User.create(username: params[:username], email: params[:email], password: params[:password])
             session[:user_id] = @user.id
-            redirect to "/users/#{@user.id}"
+            redirect to "/comics"
         else
             flash[:message] = "Whoops! Something went wrong. Re-enter your details."
             redirect to "/signup" 
@@ -57,7 +57,6 @@ class UserController < ApplicationController
             erb :"users/show"
         else
             redirect to "/comics"
-            #redirect to "/users/#{@user.id}" Would Prefer This Redirect But Doesn't Work
         end
     end
 end
