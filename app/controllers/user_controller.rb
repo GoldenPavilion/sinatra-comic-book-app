@@ -53,8 +53,11 @@ class UserController < ApplicationController
 
     get '/users/:id' do
         @user = User.find_by_id(params[:id])
-        erb :"users/show"
+        if logged_in? && current_user == @user
+            erb :"users/show"
+        else
+            redirect to "/users/#{@user.id}"
+            #REDIRECT DOESN'T WORK
+        end
     end
-
-    #WORK ON CONDITIONALS FOR COMIC_CONTROLLER
 end
