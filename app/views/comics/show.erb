@@ -1,10 +1,10 @@
 <h1>Bag & Board</h1>
 <br>
 <h2><%= @comic.title %> #<%= @comic.issue %></h2>
-<h5>Story Arc: <%= @comic.arc %></h5><br>
-<h5>Writer(s): <%= @comic.writer %></h5><br>
-<h5>Artist(s): <%= @comic.artist %></h5><br>
-<h4>Rating: <%= @comic.rating %></h4><br>
+<p>Story Arc: <b><%= @comic.arc %></b></p>
+<p>Writer(s): <b><%= @comic.writer %></b></p>
+<p>Artist(s): <b><%= @comic.artist %></b></p>
+<p>Rating: <b><%= @comic.rating %></b></p><br>
 
 <a href="/comics/<%= @comic.id %>/edit"><h5>Edit Comic</h5></a>
 
