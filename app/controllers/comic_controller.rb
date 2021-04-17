@@ -63,6 +63,7 @@ class ComicsController < ApplicationController
         if params[:comic][:title] != ""
             @comic.title = params[:comic][:title]
             @comic.issue = params[:comic][:issue]
+            @comic.publisher = params[:comic][:publisher]
             @comic.arc = params[:comic][:arc]
             @comic.writer = params[:comic][:writer]
             @comic.artist = params[:comic][:artist]
