@@ -1,6 +1,6 @@
 <h1>Bag & Board</h1>
 <br>
-<h2>Welcome, <%= @user.username %>, to the Universal Comics Feed!</h2>
+<h2>Welcome <%= @user.username %>, to the Universal Comics Feed!</h2>
 <p>Check out what everyone else is reading - or - organize your own library</p>
 <a href="/users/<%= @user.id %>"><h4>Your Personal Comic Library</h4></a>
 <br>
@@ -9,7 +9,7 @@
 <% @comics.each do |comic| %>
     <ul><a href="/comics/<%= comic.id %>"><b><%= comic.title %> #<%= comic.issue %></b></a> - Rating: <b><%= comic.rating %></b> - Added by: <%= comic.user.username %>
         <br>
-        <h6>---Written by: <%= comic.writer %>, Art by:<%= comic.artist %></h6>
+        <h6>---Written by: <%= comic.writer %>, Art by: <%= comic.artist %></h6>
     </ul>
     <br>
 <% end %>
