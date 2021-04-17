@@ -8,6 +8,21 @@
     <input type="text" name="comic[title]" value="<%= @comic.title %>"><br><br>
     <label for="issue">Issue Number:</label>
     <input type="number" min="0" name="comic[issue]" value="<%= @comic.issue %>"><br><br>
+    <label for="publisher">Publisher:</label>
+    <select name="comic[publisher]" value="<%= @comic.publisher %>">
+        <option value="DC">DC</option>
+        <option value="Marvel">Marvel</option>
+        <option value="Image">Image</option>
+        <option value="Dark Horse">Dark Horse</option>
+        <option value="IDW">IDW</options>
+        <option value="DC Vertigo">DC Vertigo</options>
+        <option value="Boom Studios">Boom Studios</options>
+        <option value="Valiant">Valiant</options>
+        <option value="Dynamite">Dynamite</options>
+        <option value="Oni Press">Oni Press</options>
+        <option value="Other">Other</options>
+    </select>
+    <br><br>
     <label for="arc">Story Arc:</label>
     <input type="text" name="comic[arc]" value="<%= @comic.arc %>"><br><br>
     <label for="writer">Writer(s):</label>
