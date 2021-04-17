@@ -24,6 +24,7 @@ class ComicsController < ApplicationController
             @comic = Comic.create(
                 title: params[:title],
                 issue: params[:issue],
+                publisher: params[:publisher],
                 arc: params[:arc],
                 writer: params[:writer],
                 artist: params[:artist],

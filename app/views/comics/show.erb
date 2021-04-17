@@ -2,6 +2,7 @@
 <br>
 <h2><%= @comic.title %> #<%= @comic.issue %></h2>
 <h6>Added by <%= @comic.user.username %> @ <%= @comic.created_at.to_s %></h6><br><br>
+<p>Publisher: <b><%= @comic.publisher %></b></p>
 <p>Story Arc: <b><%= @comic.arc %></b></p>
 <p>Writer(s): <b><%= @comic.writer %></b></p>
 <p>Artist(s): <b><%= @comic.artist %></b></p>
