@@ -28,7 +28,8 @@ class ComicsController < ApplicationController
                 arc: params[:arc],
                 writer: params[:writer],
                 artist: params[:artist],
-                rating: params[:rating]    
+                rating: params[:rating],
+                review: params[:review]    
             )
             @comic.user_id = current_user.id
             @comic.save
