@@ -2,6 +2,9 @@
 <br>
 <h4>Add A New Comic</h4>
 <br>
+<% if flash.has?(:message) %>
+    <%= flash[:message] %>
+<% end %>
 <form action="/comics" method="post">
     <label for="title">Title:</label>
     <input type="text" name="title"><br><br>

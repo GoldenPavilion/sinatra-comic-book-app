@@ -5,7 +5,7 @@
 
 <h3>Your Comics</h3>
 <% @user.comics.each do |comic| %>
-    <a href="/comics/<%= comic.id %>"><%= comic.title %> #<%= comic.issue %></a><br>
+    <a href="/comics/<%= comic.id %>"><%= comic.title %> #<%= comic.issue %></a> -  Added on: <%= comic.created_at.to_s %><br>
 <% end %>
 <br>
 <a href="/comics"><h3>Return Home</h3></a>

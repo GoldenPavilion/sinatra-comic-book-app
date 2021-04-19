@@ -35,6 +35,7 @@ class ComicsController < ApplicationController
             @comic.save
             redirect to "/comics/#{@comic.id}"
         else
+            flash[:message] = "A comic title is required to add it to your library." 
             redirect to "/comics/new"
         end
     end
