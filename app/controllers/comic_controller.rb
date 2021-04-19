@@ -75,6 +75,7 @@ class ComicsController < ApplicationController
 
             redirect to "/comics/#{@comic.id}"
         else
+            flash[:message] = "Your comic must have a title."
             redirect to "/comics/#{@comic.id}/edit"
         end
     end

@@ -2,6 +2,9 @@
 <br>
 <h4>Edit Comic</h4>
 <br>
+<% if flash.has?(:message) %>
+    <%= flash[:message] %>
+<% end %>
 <form action="/comics/<%= @comic.id %>" method="post">
     <input id="hidden" type="hidden" name="_method" value="patch">
     <label for="title">Title:</label>
