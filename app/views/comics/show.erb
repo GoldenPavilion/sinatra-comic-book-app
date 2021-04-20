@@ -9,6 +9,7 @@
 <p>Rating: <b><%= @comic.rating %></b></p>
 <p>Review:<br><%= @comic.review %></p><br>
 
+<% if current_user.id == @comic.user_id %>
 <a href="/comics/<%= @comic.id %>/edit"><h5>Edit Comic</h5></a>
 
 <form action="/comics/<%= @comic.id %>" method="post">
@@ -16,5 +17,6 @@
     <input type="submit" id="delete" value="Delete">
 </form>
 <br>
+<% end %>
 
 <a href="/users/<%= @user.id %>"><h3>Return To Your Library</h3></a>
