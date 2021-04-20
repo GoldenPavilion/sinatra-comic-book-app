@@ -32,7 +32,6 @@ class UserController < ApplicationController
     end
 
     post '/signup' do
-        #if params[:username] !="" && params[:email] !="" && params[:password] !=""
         @user = User.create(username: params[:username], email: params[:email], password: params[:password])
         if @user.save
             session[:user_id] = @user.id
@@ -42,8 +41,6 @@ class UserController < ApplicationController
             redirect to "/signup" 
         end
     end
-
-    ###MAKE SURE YOU CAN'T USE A PRE-EXISTING EMAIL
 
     get '/logout' do
         if !logged_in?
