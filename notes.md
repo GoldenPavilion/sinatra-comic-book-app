@@ -8,5 +8,3 @@
 [x] Ensure that users can edit and delete only their own resources - not resources created by other users.
 [x] DOUBLE CHECK DURING 1-1 Validate user input so bad data cannot be persisted to the database.
 [x] BONUS: Display validation failures to user with error messages. (This is an optional feature, challenge yourself and give it a shot!)
-
-Add <--! % if current_user.id == @comic.id % --> around edit and delete comic to prevent the user from even seeing the edit and delete options on other peoples' comics.
