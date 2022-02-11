@@ -11,6 +11,8 @@ How to Install This App:
 4. Navigate to localhost:9393 in your browser. 
 5. Follow the instructions onscreen and enjoy!
 
+Video Demo: https://youtu.be/rlBkOF8x5UE
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/GoldenPavilion/sinatra-comic-book-app/. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/GoldenPavilion/sinatra-comic-book-app/blob/master/CODE_OF_CONDUCT.md).

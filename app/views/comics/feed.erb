@@ -10,6 +10,14 @@
     <ul><a href="/comics/<%= comic.id %>"><b><%= comic.title %> #<%= comic.issue %></b></a> - Rating: <b><%= comic.rating %></b> - Added by: <%= comic.user.username %>
         <br>
         <h6>---Written by: <%= comic.writer %>, Art by: <%= comic.artist %></h6>
+        <% if current_user.id == comic.user_id %>
+            <a href="/comics/<%= comic.id %>/edit"><h5>Edit Comic</h5></a>
+
+            <form action="/comics/<%= comic.id %>" method="post">
+                <input id="hidden" type="hidden" name="_method" value="delete">
+                <input type="submit" id="delete" value="Delete">
+            </form>
+        <% end %>
     </ul>
     <br>
 <% end %>
